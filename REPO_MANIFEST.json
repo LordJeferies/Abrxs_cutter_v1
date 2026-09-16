@@ -1,0 +1,165 @@
+{
+  "schemaVersion": "abrxs.cutter.repo-manifest.v1",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 197,
+      "sha256": "2a5abac48d5ff6611a9ae94785400afb784633788025bb6a658b06e1a9847805"
+    },
+    {
+      "path": "CURRENT_CUTTER.example.json",
+      "bytes": 257,
+      "sha256": "f1429e88986e04524d0f97ab8e582caa0a391c9fe7a8d06193013e4aa9f13ca0"
+    },
+    {
+      "path": "CURRENT_CUTTER.json",
+      "bytes": 739,
+      "sha256": "d6b3ebe51140bba66b5837739fb70bc09e3da44e3ca10dcceaedae1ace787c98"
+    },
+    {
+      "path": "LOCAL_VERIFY_REPORT.json",
+      "bytes": 300,
+      "sha256": "91c60da4a77f64e29ab986a3c8da8fff3e26f4b9caefa0823ee57b9371f40e48"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1400,
+      "sha256": "5058ed3cd4d8b401e8c2d513caa1a9cbe6c3675ba1113146ed6bd7c22e288011"
+    },
+    {
+      "path": "START_HERE.txt",
+      "bytes": 909,
+      "sha256": "19b789dd214204d1b1cf270505c054552ed377f3f579c52533f6a2a2348ef8f2"
+    },
+    {
+      "path": "VERSION.json",
+      "bytes": 182,
+      "sha256": "7439b61ceaa6254bdd988dfef65e3fb582c287448864e3a987cb3d70f1898f18"
+    },
+    {
+      "path": "apps/cutter/current/ABRXOS_CUTTER_CONTROL_PANEL_V3.py",
+      "bytes": 34827,
+      "sha256": "7933a18276f3bbd71f4303606355fa7722b9f49c78cfcbbead49ff3b4408e011"
+    },
+    {
+      "path": "apps/cutter/current/ABRXOS_MULTI_HTML_CUTTER_V2.py",
+      "bytes": 47533,
+      "sha256": "d9a108f985b40beaace35fdc526e29f6ebeb56820f1298f581d5177df2c58bbf"
+    },
+    {
+      "path": "docs/github/00_FIRST_PUSH.txt",
+      "bytes": 282,
+      "sha256": "7aac7e5fe3522143b041c30f9a6e84fe8f07cd619e53ee08e605db5f243f2124"
+    },
+    {
+      "path": "docs/maintenance/00_SAFE_UPDATE_POLICY.txt",
+      "bytes": 654,
+      "sha256": "7f6acb6747cc3374f28d137fd2e176f94a3ab0eed91815babedb3dcd6e2b84f0"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-09-16-abrxs-os-and-cutter-repos.md",
+      "bytes": 4619,
+      "sha256": "8a92393c7ae341102aef2dea0f211f80adbacf73c6f45b109e4331f7d691477f"
+    },
+    {
+      "path": "docs/tutorials/00_INSTALL_FROM_SCRATCH.txt",
+      "bytes": 498,
+      "sha256": "437198c6dc2cfec987a0d1e97e471b357f28f2f6571554536d65ea0c1c13758f"
+    },
+    {
+      "path": "docs/tutorials/01_CAPTURE_CURRENT_MAC.txt",
+      "bytes": 311,
+      "sha256": "e86b3415dd05bc0e50df4132cb2b29feafbf5401ae7aafa41157f1a042b4c5d7"
+    },
+    {
+      "path": "install/INSTALAR_CUTTER_DESDE_CERO.command",
+      "bytes": 1590,
+      "sha256": "734926872e0d3361b06ade39146ae59a476fda78afac0cbe84e4434a018986d9"
+    },
+    {
+      "path": "install/INSTALAR_DEPENDENCIAS_MAC.command",
+      "bytes": 2382,
+      "sha256": "6fb84d25174e9ce4625ce2e9a339f38b030e9c02d7318b2eb098486fac3da020"
+    },
+    {
+      "path": "install/INSTALAR_ENTORNO_COMPLETO_MAC.command",
+      "bytes": 398,
+      "sha256": "314810a1071fa5fe7215b0eea046fe477224d7d263e09787ed9dc0a0da6d7974"
+    },
+    {
+      "path": "install/INSTALAR_MODELOS.command",
+      "bytes": 1621,
+      "sha256": "fd0b2f663b4d3c409ce89b36b4a38a83454d69ad13ef6f794123a3102255991f"
+    },
+    {
+      "path": "models/MODELS_MANIFEST.json",
+      "bytes": 169,
+      "sha256": "769a5a2e95babcff869f19155c22b66766f235cf9ccb262e60456469fd8a0547"
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "bytes": 60,
+      "sha256": "a5ecd5b84100881151822073cc568dc60576b9e43968badc07f3daa30c4d5502"
+    },
+    {
+      "path": "tests/test_capture.py",
+      "bytes": 2504,
+      "sha256": "34f0a5bd15e1369cdb55987086abc31e68fd1473ffcad13ecf723c26f08c3682"
+    },
+    {
+      "path": "tests/test_install_contract.py",
+      "bytes": 2370,
+      "sha256": "9072e61842c6631c54aef8642e8241d3dfd9e0e1c9bac7cf5cba7bc2c4243a69"
+    },
+    {
+      "path": "tools/CAPTURAR_CUTTER_ACTUAL.command",
+      "bytes": 1296,
+      "sha256": "fd336d1a808314e78e836e2d508bd10735634794c2e4d66144a1a00d96a2fdf7"
+    },
+    {
+      "path": "tools/DEJAR_REPO_LISTO.command",
+      "bytes": 337,
+      "sha256": "60c40db0b80aefa9be6197c31142871f951fa07e2f0304377d80085a85d88765"
+    },
+    {
+      "path": "tools/GENERAR_MANIFEST.command",
+      "bytes": 243,
+      "sha256": "65e4973ddccfb93625ef965a2244c311bd5f2d4554144dfeefd80fa59f9c3e10"
+    },
+    {
+      "path": "tools/GENERAR_MANIFEST.py",
+      "bytes": 746,
+      "sha256": "1b48b1c2e339a1ab13a2daf97d8e509fa2d9c86525506ad22c0c7319a81fa207"
+    },
+    {
+      "path": "tools/PREFLIGHT.command",
+      "bytes": 640,
+      "sha256": "b6e5bcc85217cc9e0d5b815e38514c937d5da616f72c0769a4a8e73cb3e27d70"
+    },
+    {
+      "path": "tools/PREPARAR_REPO_GITHUB.command",
+      "bytes": 844,
+      "sha256": "8cbd26f35af3235dc911d26da65b87b9fd8d1b770860ccd0c1ee5fc598a1f418"
+    },
+    {
+      "path": "tools/VERIFY_ALL.command",
+      "bytes": 245,
+      "sha256": "6736d1c10cfdee4e1fa51c0f8bbc23214c59f585019650dd0d006f31f311b63c"
+    },
+    {
+      "path": "tools/capture_cutter.py",
+      "bytes": 4703,
+      "sha256": "af6d68bdf8d13383f8acaa27797b496ba08c2e5b7d0da356c8e6bb650c5534fe"
+    },
+    {
+      "path": "tools/lib/python_resolver.zsh",
+      "bytes": 575,
+      "sha256": "30b3682a694f2c8363b98e7097d41273025a5bf99950c91a3b9e6c014f030fc2"
+    },
+    {
+      "path": "tools/verify_repo.py",
+      "bytes": 2766,
+      "sha256": "4d1c826b124460acdbb254345e3593e2c0fc9b0743bf04e9ef9a7fb745df1e92"
+    }
+  ]
+}

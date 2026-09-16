@@ -1,0 +1,27 @@
+ABRXS CUTTER V1 · START HERE
+
+OBJETIVO
+Repo separado y reproducible del Cutter. Conserva código del Cutter, contrato de runtime,
+dependencias detectadas, modelos declarados y scripts de instalación desde cero.
+
+PRIMERA VEZ EN LA MAC DONDE YA FUNCIONA EL CUTTER
+1. zsh tools/DEJAR_REPO_LISTO.command
+2. zsh tools/PREPARAR_REPO_GITHUB.command
+3. commit + push a Abrxs_cutter_v1
+
+MAC NUEVA / RECUPERACIÓN
+1. clonar Abrxs_cutter_v1
+2. cd Abrxs_cutter_v1
+3. zsh install/INSTALAR_ENTORNO_COMPLETO_MAC.command
+
+El setup completo:
+- detecta/instala Homebrew con confirmación si falta;
+- detecta/instala Python >=3.11;
+- instala FFmpeg/ffprobe;
+- crea ~/.abrxos/cutter/venv;
+- instala requirements-runtime.txt detectados del Cutter actual;
+- informa/instala política de modelos declarados;
+- reinstala ~/ABRXOS_CUTTER_APP;
+- crea ~/Desktop/ABRXOS Cutter.app.
+
+No sube masters, renders, media ni outputs al repo.

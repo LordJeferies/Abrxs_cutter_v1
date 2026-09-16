@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "abrxs.cutter.current.v1",
+  "product": "ABRXOS Cutter",
+  "version": "captured-from-mac",
+  "entrypoint": "ABRXOS_CUTTER_CONTROL_PANEL_V3.py",
+  "externalToolsRequired": ["ffmpeg", "ffprobe"],
+  "desktopAppName": "ABRXOS Cutter.app"
+}

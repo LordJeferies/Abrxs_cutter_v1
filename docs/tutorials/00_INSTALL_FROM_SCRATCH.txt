@@ -1,0 +1,15 @@
+INSTALACIÓN DESDE CERO
+
+1. Clona el repo privado Abrxs_cutter_v1.
+2. cd Abrxs_cutter_v1
+3. Ejecuta:
+   zsh install/INSTALAR_ENTORNO_COMPLETO_MAC.command
+4. Si Homebrew no existe, el script pregunta antes de instalarlo.
+5. Verifica:
+   zsh tools/PREFLIGHT.command
+   zsh tools/VERIFY_ALL.command
+6. Abre ~/Desktop/ABRXOS Cutter.app.
+
+El código queda en ~/ABRXOS_CUTTER_APP.
+El venv queda en ~/.abrxos/cutter/venv.
+Los datos/media/outputs no se restauran desde Git; requieren backup independiente.

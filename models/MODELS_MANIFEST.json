@@ -1,0 +1,5 @@
+{
+  "schemaVersion": "abrxs.cutter.models.v1",
+  "models": [],
+  "policy": "Only download models declared by current Cutter source or explicitly added by maintainer."
+}

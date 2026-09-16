@@ -1,0 +1,11 @@
+ABRXS CUTTER · SAFE UPDATE POLICY
+
+1. Cutter source/current es la verdad de código del Cutter.
+2. Media, masters y outputs nunca viven en Git.
+3. Modificar cutter en branch/hotfix, no directamente en main.
+4. Un cambio de contrato sourceRanges requiere test cruzado con Geometra.
+5. Cambios de FFmpeg/encoder requieren preflight y fixture de corte.
+6. requirements-runtime.txt cambia sólo si el código importa un paquete nuevo.
+7. Modelos pesados no se versionan en Git; se declaran por ID/checksum/proveedor.
+8. Installer debe poder reconstruir venv y runtime en otra Mac.
+9. Launcher local se regenera; nunca se captura con rutas /Users/<usuario>.

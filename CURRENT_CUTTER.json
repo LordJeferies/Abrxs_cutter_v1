@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "abrxs.cutter.current.v1",
+  "product": "ABRXOS Cutter",
+  "version": "3",
+  "entrypoint": "ABRXOS_CUTTER_CONTROL_PANEL_V3.py",
+  "capturedFrom": "/Users/lordjef/ABRXOS_CUTTER_APP",
+  "pythonModulesDetected": [
+    "ABRXOS_MULTI_HTML_CUTTER_V2",
+    "__future__",
+    "argparse",
+    "collections",
+    "dataclasses",
+    "datetime",
+    "hashlib",
+    "html",
+    "http",
+    "json",
+    "os",
+    "pathlib",
+    "re",
+    "shutil",
+    "socket",
+    "subprocess",
+    "sys",
+    "threading",
+    "time",
+    "traceback",
+    "typing",
+    "unicodedata",
+    "urllib",
+    "webbrowser"
+  ],
+  "requirements": [],
+  "externalToolsRequired": [
+    "ffmpeg",
+    "ffprobe"
+  ],
+  "desktopAppName": "ABRXOS Cutter.app"
+}

@@ -1,0 +1,7 @@
+{
+  "repository": "Abrxs_cutter_v1",
+  "repositoryVersion": "1.0.0-starter",
+  "captureRequired": true,
+  "runtimePolicy": "capture-current-then-reinstall",
+  "date": "2026-09-16"
+}

@@ -1,0 +1,9 @@
+REPO: Abrxs_cutter_v1
+
+zsh tools/PREPARAR_REPO_GITHUB.command
+git status
+git diff --cached
+git commit -m "Abrxs_cutter_v1 · reproducible current snapshot"
+gh repo create Abrxs_cutter_v1 --private --source=. --remote=origin --push
+git tag abrxs-cutter-v1.0.0
+git push origin --tags

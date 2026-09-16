@@ -1,0 +1,8 @@
+CAPTURAR CUTTER ACTUAL PARA EL PRIMER COMMIT
+
+zsh tools/DEJAR_REPO_LISTO.command
+
+El script intenta ~/ABRXOS_CUTTER_APP y ~/ABRXOS_MULTI_CUTTER. Si no puede decidir, pide que arrastres la carpeta. No captura LAUNCH_*.command, caches, videos, renders ni output.
+
+Después:
+zsh tools/PREPARAR_REPO_GITHUB.command

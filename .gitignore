@@ -20,3 +20,4 @@ videos/
 *.avi
 .env
 .venv/
+GITHUB_NEXT_STEPS.txt

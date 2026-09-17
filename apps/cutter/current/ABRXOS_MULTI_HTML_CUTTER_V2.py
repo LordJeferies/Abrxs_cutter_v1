@@ -39,7 +39,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
-VERSION = "2.0.0"
+VERSION = "2.1.0"
 VIDEO_EXTS = {".mp4", ".mov", ".m4v", ".mkv", ".avi", ".webm"}
 HTML_EXTS = {".html", ".htm"}
 
@@ -1384,6 +1384,15 @@ def main():
         inspect_htmls([Path(x).expanduser() for x in args.html])
         return
 
+
+# ABRXS_CAPCUT_EXPORT_V310_HOOK
+import sys as _abrxs_capcut_sys
+from ABRXOS_CAPCUT_EXPORT_V310 import install as _abrxs_install_capcut_export
+_abrxs_install_capcut_export(_abrxs_capcut_sys.modules[__name__])
+
+# ABRXS_PROCESS_CONTROL_ENGINE_V311_HOOK
+from ABRXOS_CUTTER_PROCESS_CONTROL_V311 import register_current_render as _abrxs_register_current_render
+_abrxs_register_current_render()
 
 if __name__ == "__main__":
     main()

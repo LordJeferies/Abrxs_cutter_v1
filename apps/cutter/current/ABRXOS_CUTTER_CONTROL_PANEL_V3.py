@@ -657,6 +657,77 @@ refreshSession().then(refreshProgress);
 setInterval(refreshProgress,1000);
 setInterval(refreshSession,4000);
 </script>
+
+<!-- ABRXS_PROCESS_CONTROL_WIDGET_V311 -->
+<style>
+#abrxs-process-control{position:fixed;right:18px;bottom:18px;z-index:2147483000;width:300px;background:rgba(16,18,24,.96);color:#f5f7fb;border:1px solid rgba(255,255,255,.14);border-radius:16px;box-shadow:0 18px 60px rgba(0,0,0,.34);font:13px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:14px}
+#abrxs-process-control .abrxs-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#abrxs-process-control .abrxs-title{font-weight:700;font-size:14px}
+#abrxs-process-control .abrxs-state{font-weight:700;font-size:11px;padding:5px 8px;border-radius:999px;background:#2a2e39}
+#abrxs-process-control .abrxs-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+#abrxs-process-control button{border:0;border-radius:10px;padding:9px 10px;cursor:pointer;font-weight:650;background:#2a2e39;color:#fff}
+#abrxs-process-control button.abrxs-danger{background:#8e2f35}
+#abrxs-process-control button.abrxs-close{grid-column:1 / -1;background:#383d4a}
+#abrxs-process-details{display:none;max-height:180px;overflow:auto;margin-top:10px;padding-top:9px;border-top:1px solid rgba(255,255,255,.10);font:11px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;color:#cbd1dc}
+#abrxs-close-modal{display:none;position:fixed;inset:0;z-index:2147483646;background:rgba(0,0,0,.48);align-items:center;justify-content:center;padding:24px}
+#abrxs-close-modal .abrxs-modal-card{width:min(460px,100%);background:#171a22;color:#fff;border-radius:18px;padding:20px;box-shadow:0 20px 70px rgba(0,0,0,.5)}
+#abrxs-close-modal .abrxs-modal-actions{display:grid;gap:9px;margin-top:16px}
+#abrxs-close-modal button{border:0;border-radius:11px;padding:11px 12px;font-weight:700;cursor:pointer}
+</style>
+<div id="abrxs-process-control">
+  <div class="abrxs-row"><div class="abrxs-title">ABRXS Cutter · Procesos</div><div id="abrxs-process-state" class="abrxs-state">INACTIVO</div></div>
+  <div id="abrxs-process-summary" style="margin-top:7px;color:#aeb6c5">Sin render activo.</div>
+  <div class="abrxs-actions">
+    <button id="abrxs-view-processes" type="button">Ver procesos</button>
+    <button id="abrxs-cancel-render" type="button" class="abrxs-danger">Cancelar render</button>
+    <button id="abrxs-close-cutter" type="button" class="abrxs-close">Cerrar Cutter…</button>
+  </div>
+  <div id="abrxs-process-details"></div>
+</div>
+<div id="abrxs-close-modal">
+  <div class="abrxs-modal-card">
+    <div style="font-size:17px;font-weight:750">Cerrar ABRXS Cutter</div>
+    <div id="abrxs-close-copy" style="margin-top:8px;color:#bdc4d1">Elige qué hacer con el render actual.</div>
+    <div class="abrxs-modal-actions">
+      <button id="abrxs-close-cancel" style="background:#8e2f35;color:#fff">Cancelar render y salir</button>
+      <button id="abrxs-close-background" style="background:#303746;color:#fff">Dejar render en segundo plano y salir</button>
+      <button id="abrxs-close-back" style="background:#eceff4;color:#16181d">Volver</button>
+    </div>
+  </div>
+</div>
+<script>
+(()=>{
+  const API='http://127.0.0.1:17831';
+  const $=s=>document.querySelector(s);
+  let last={active:false,state:'INACTIVO',processes:[]};
+  let detailsOpen=false;
+  const labels={INACTIVE:'INACTIVO',RENDERING:'RENDERIZANDO',CANCELING:'CANCELANDO',ERROR:'ERROR'};
+  function render(s){
+    last=s||last;
+    $('#abrxs-process-state').textContent=labels[last.state]||last.state||'INACTIVO';
+    $('#abrxs-process-summary').textContent=last.active?`Render activo · PID ${last.renderPids.join(', ')}`:'Sin render activo.';
+    $('#abrxs-cancel-render').disabled=!last.active;
+    const NL=String.fromCharCode(10);
+    const lines=(last.processes||[]).map(p=>`PID ${p.pid} · ${p.kind} · ${p.elapsed}${NL}${p.command}`);
+    $('#abrxs-process-details').textContent=lines.length?lines.join(NL+NL):'No hay procesos de render.';
+    $('#abrxs-process-details').style.display=detailsOpen?'block':'none';
+  }
+  async function status(){
+    try{const r=await fetch(API+'/status',{cache:'no-store'});render(await r.json());}
+    catch(e){render({active:false,state:'ERROR',renderPids:[],processes:[],error:String(e)});}
+  }
+  async function post(path,body={}){const r=await fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return r.json();}
+  $('#abrxs-view-processes').addEventListener('click',()=>{detailsOpen=!detailsOpen;render(last);if(detailsOpen)status();});
+  $('#abrxs-cancel-render').addEventListener('click',async()=>{if(!last.active)return;if(!confirm('¿Cancelar el render activo y sus procesos FFmpeg?'))return;render({...last,state:'CANCELING'});await post('/cancel');await status();});
+  $('#abrxs-close-cutter').addEventListener('click',()=>{const m=$('#abrxs-close-modal');$('#abrxs-close-copy').textContent=last.active?'Hay un render activo. ¿Qué quieres hacer?':'No hay render activo. Puedes cerrar el panel.';m.style.display='flex';});
+  $('#abrxs-close-back').addEventListener('click',()=>{$('#abrxs-close-modal').style.display='none';});
+  $('#abrxs-close-cancel').addEventListener('click',async()=>{await post('/shutdown',{cancelRender:true});setTimeout(()=>window.close(),180);});
+  $('#abrxs-close-background').addEventListener('click',async()=>{await post('/shutdown',{cancelRender:false});setTimeout(()=>window.close(),180);});
+  window.addEventListener('beforeunload',e=>{if(last.active){e.preventDefault();e.returnValue='';}});
+  status();setInterval(status,1500);
+})();
+</script>
+
 </body>
 </html>"""
 
@@ -795,6 +866,10 @@ def main():
     finally:
         server.server_close()
 
+
+# ABRXS_PROCESS_CONTROL_V311_HOOK
+from ABRXOS_CUTTER_PROCESS_CONTROL_V311 import start_server_once as _abrxs_start_process_control
+_abrxs_start_process_control()
 
 if __name__ == "__main__":
     main()

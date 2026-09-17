@@ -13,8 +13,8 @@
     },
     {
       "path": "CURRENT_CUTTER.json",
-      "bytes": 739,
-      "sha256": "d6b3ebe51140bba66b5837739fb70bc09e3da44e3ca10dcceaedae1ace787c98"
+      "bytes": 1240,
+      "sha256": "e0b2ff180112fe1acece7d23f1f6f2bbd00f8048a904cfa293709457ece27115"
     },
     {
       "path": "GITHUB_NEXT_STEPS.txt",
@@ -38,18 +38,33 @@
     },
     {
       "path": "VERSION.json",
-      "bytes": 182,
-      "sha256": "7439b61ceaa6254bdd988dfef65e3fb582c287448864e3a987cb3d70f1898f18"
+      "bytes": 231,
+      "sha256": "0203103ee86f5af01f9941aa24db9762f85d0131012bea9fe6365bbc7836c239"
+    },
+    {
+      "path": "apps/cutter/current/ABRXOS_CAPCUT_EXPORT_V310.py",
+      "bytes": 14203,
+      "sha256": "066216e92522f73d76c08d4ce60c274745b85ef13decdc4adf86c0d06349cf86"
     },
     {
       "path": "apps/cutter/current/ABRXOS_CUTTER_CONTROL_PANEL_V3.py",
-      "bytes": 34827,
-      "sha256": "7933a18276f3bbd71f4303606355fa7722b9f49c78cfcbbead49ff3b4408e011"
+      "bytes": 40535,
+      "sha256": "ba035007552b52e18716469675901580ba35155300a107fcee2aeecae1d07e5e"
+    },
+    {
+      "path": "apps/cutter/current/ABRXOS_CUTTER_PROCESS_CONTROL_V311.py",
+      "bytes": 13707,
+      "sha256": "4d3ec355ed87d692448588388cdc43fe617a524fb1cb1eeaaf79d7e8d441ae4c"
     },
     {
       "path": "apps/cutter/current/ABRXOS_MULTI_HTML_CUTTER_V2.py",
-      "bytes": 47533,
-      "sha256": "d9a108f985b40beaace35fdc526e29f6ebeb56820f1298f581d5177df2c58bbf"
+      "bytes": 47922,
+      "sha256": "f76b8b60aaf97cb82fd4691686f5e649761e41447cb23a266a04595b39f05df9"
+    },
+    {
+      "path": "apps/cutter/current/VERSION.json",
+      "bytes": 515,
+      "sha256": "7b0cdd6a9ca1e2bb59e2b4eb96d27e4dbbc895399299cb95c8e450cfbae7d108"
     },
     {
       "path": "docs/github/00_FIRST_PUSH.txt",
@@ -60,6 +75,16 @@
       "path": "docs/maintenance/00_SAFE_UPDATE_POLICY.txt",
       "bytes": 654,
       "sha256": "7f6acb6747cc3374f28d137fd2e176f94a3ab0eed91815babedb3dcd6e2b84f0"
+    },
+    {
+      "path": "docs/releases/CHANGELOG_CUTTER_3_1_0.md",
+      "bytes": 909,
+      "sha256": "e1482df5ae1903c95f5bdc47dea5ddc0356d558c2c929edbced512849b60ee56"
+    },
+    {
+      "path": "docs/releases/CHANGELOG_CUTTER_3_1_1_PROCESS_CONTROL.md",
+      "bytes": 1040,
+      "sha256": "ea572fa2c1bbe18f214c3d7487c38345677b1470bfa8d11d14f75d74f0d7e50b"
     },
     {
       "path": "docs/superpowers/plans/2026-09-16-abrxs-os-and-cutter-repos.md",
@@ -107,6 +132,11 @@
       "sha256": "a5ecd5b84100881151822073cc568dc60576b9e43968badc07f3daa30c4d5502"
     },
     {
+      "path": "tests/test_capcut_export_v310.py",
+      "bytes": 2436,
+      "sha256": "e94a313b12bb2b6c4e596dc0bec4d4ea05811c132ac0ab90575f370e7033a3c3"
+    },
+    {
       "path": "tests/test_capture.py",
       "bytes": 2504,
       "sha256": "34f0a5bd15e1369cdb55987086abc31e68fd1473ffcad13ecf723c26f08c3682"
@@ -115,6 +145,16 @@
       "path": "tests/test_install_contract.py",
       "bytes": 2370,
       "sha256": "9072e61842c6631c54aef8642e8241d3dfd9e0e1c9bac7cf5cba7bc2c4243a69"
+    },
+    {
+      "path": "tests/test_process_control_v311.py",
+      "bytes": 3914,
+      "sha256": "a6e8582d96f0dfe9c0e0520ad74704ccbd6399a0433eed218b3e088516d4f39d"
+    },
+    {
+      "path": "tools/ABRXS_CUTTER_PROCESS_CONTROL.command",
+      "bytes": 1433,
+      "sha256": "c08d36c6afb42d32b7542120c3e114f6bb199aa5f7625bd90964cab45b938ee9"
     },
     {
       "path": "tools/CAPTURAR_CUTTER_ACTUAL.command",

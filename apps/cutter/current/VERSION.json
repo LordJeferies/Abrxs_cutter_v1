@@ -1,0 +1,23 @@
+{
+  "product": "ABRXOS Cutter",
+  "version": "3.1.1",
+  "engineVersion": "2.1.0",
+  "release": "CapCut Export + Process Control",
+  "features": [
+    "capcutExport",
+    "outputModes",
+    "sectionsManifest",
+    "processControl",
+    "safeCancel",
+    "closePrompt"
+  ],
+  "capcutExportModes": [
+    "complete_only",
+    "complete_and_sections",
+    "sections_only"
+  ],
+  "capcutExportDefault": "complete_and_sections",
+  "date": "2026-09-17",
+  "processControlPort": 17831,
+  "closeBehavior": "ask_every_time"
+}

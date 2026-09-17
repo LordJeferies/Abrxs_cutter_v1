@@ -1,7 +1,7 @@
 {
   "schemaVersion": "abrxs.cutter.current.v1",
   "product": "ABRXOS Cutter",
-  "version": "3",
+  "version": "3.1.1",
   "entrypoint": "ABRXOS_CUTTER_CONTROL_PANEL_V3.py",
   "capturedFrom": "/Users/lordjef/ABRXOS_CUTTER_APP",
   "pythonModulesDetected": [
@@ -35,5 +35,30 @@
     "ffmpeg",
     "ffprobe"
   ],
-  "desktopAppName": "ABRXOS Cutter.app"
+  "desktopAppName": "ABRXOS Cutter.app",
+  "engineVersion": "2.1.0",
+  "features": [
+    "capcutExport",
+    "outputModes",
+    "sectionsManifest",
+    "processControl",
+    "safeCancel",
+    "closePrompt"
+  ],
+  "capcutExportModes": [
+    "complete_only",
+    "complete_and_sections",
+    "sections_only"
+  ],
+  "capcutExportDefault": "complete_and_sections",
+  "processControl": {
+    "port": 17831,
+    "states": [
+      "INACTIVE",
+      "RENDERING",
+      "CANCELING",
+      "ERROR"
+    ],
+    "closeBehavior": "ask_every_time"
+  }
 }

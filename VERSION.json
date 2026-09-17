@@ -1,7 +1,9 @@
 {
   "repository": "Abrxs_cutter_v1",
-  "repositoryVersion": "1.0.0-starter",
-  "captureRequired": true,
+  "repositoryVersion": "1.2.0",
+  "captureRequired": false,
   "runtimePolicy": "capture-current-then-reinstall",
-  "date": "2026-09-16"
+  "date": "2026-09-17",
+  "cutterVersion": "3.1.1",
+  "engineVersion": "2.1.0"
 }
